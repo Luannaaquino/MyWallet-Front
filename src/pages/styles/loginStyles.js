@@ -30,7 +30,7 @@ const Container = styled.div`
     }
 
     input{
-        width: 80%;
+        width: 50%;
         height: 45px;
         padding-left: 10px;
         margin-bottom: 5px;
@@ -51,7 +51,7 @@ const Container = styled.div`
     }
 
     button{
-        width: 80%;
+        width: 51%;
         height: 45px;
         border-radius: 5px;
         background-color: #A328D6;

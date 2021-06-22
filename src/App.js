@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from '../src/pages/Login'
 import SingUp from '../src/pages/SignUp'
+import Wallet from './pages/Wallet';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </Route>
         <Route path="/sign-up" exact>
           <SingUp />
+        </Route>
+        <Route path="/Wallet" exact>
+          <Wallet />
         </Route>
       </Switch>
     </Router>
