@@ -51,11 +51,14 @@ const Container = styled.div`
     }
 
     button{
-        width: 93%;
+        width: 80%;
         height: 45px;
         border-radius: 5px;
         background-color: #A328D6;
         color: white;
+        @media (max-width: 600px) {
+            width: 93%;
+        }
     }
 `;
   
