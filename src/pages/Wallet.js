@@ -4,7 +4,7 @@ import { AiOutlineMinusCircle, AiOutlinePlusCircle } from 'react-icons/ai';
 
 import Header from '../components/Header';
 import StatementBox from '../components/StatementBox';
-import BalanceContainer from './styles/Wallet';
+import BalanceContainer from './styles/WalletStyles';
 
 export default function Wallet() {
 
