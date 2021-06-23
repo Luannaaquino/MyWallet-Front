@@ -26,6 +26,7 @@ const BalanceContainer = styled.div`
         padding: 30px;
     }
     a {
+        font-family: 'Raleway', sans-serif;
         width: 47%;
     }
     button {
@@ -36,6 +37,11 @@ const BalanceContainer = styled.div`
         flex-direction: column;
         justify-content: space-between;
         padding: 10px;
+        background-color: #A328D6;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        font-size: 17px;
     }
     span {
         color: rgb(125, 125, 125)
