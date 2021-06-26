@@ -27,21 +27,26 @@ export default function SingUp() {
     const request = axios.post('http://localhost:4000/sign-up', body);
     request.then((response)=> {
       if (response.status === 201){
-          setLoading(false);
-          alert('Cadastrado com sucesso');
-          history.push("/");
-      } else {
-          alert(response.status);
-      }
-      request.catch((error)=> {
-        if(error.response.status === 409) {
-            alert('Esse email já está em uso');
-        } else {
-            alert('Houve um erro ao cadastrar');
-        }
         setLoading(false);
+        alert('Cadastrado com sucesso');
+        history.push("/");
+      } else {
+        alert(response.status);
+      }
+    });
+
+    request.catch((err)=> {
+        setLoading(false)
+
+
+        if(err.response.status === 409) {
+            alert('Esse email já está em uso');
+        } else if (err.response.status === 422){
+            alert('Preencha todos os campos corretamente');
+        } else {
+            alert('Houve um erro ao realizar o cadastro, tente novamente');
+        }
     })
-  });
   }
 
   return (
