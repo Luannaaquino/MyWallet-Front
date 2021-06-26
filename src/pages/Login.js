@@ -1,12 +1,15 @@
 import React, { useState, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import Container from '../pages/styles/loginStyles'
+import UserContext from '../context/UserContext';
+import axios from 'axios';
 
 export default function Login() {
+	const [warning, setwarning] = useState(false);
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+	const history = useHistory();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [warning, setWarning] = useState('');
 
   return (
       <Container>
