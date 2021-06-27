@@ -5,6 +5,7 @@ import UserContext from '../context/UserContext';
 import axios from 'axios';
 
 export default function Login() {
+  const { setUser } = useContext(UserContext)
 	const [loading, setLoading] = useState(false);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -22,13 +23,9 @@ export default function Login() {
 
     const request = axios.post('http://localhost:4000/sign-in', body);
     request.then((response)=> {
-      if (response.status === 200){
-        setLoading(false);
+        setUser(response.data)
         alert('Logado com sucesso');
         history.push("/Wallet");
-      } else {
-        alert(response.status);
-      }
     });
 
     request.catch((err)=> {
